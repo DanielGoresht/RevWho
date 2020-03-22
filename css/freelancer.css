@@ -9274,6 +9274,7 @@ button.bg-dark:focus {
   .text-sm-center {
     text-align: center !important;
   }
+
 }
 
 @media (min-width: 768px) {
@@ -9287,6 +9288,12 @@ button.bg-dark:focus {
     text-align: center !important;
   }
 }
+
+@media (max-width: 767px) {
+  h2 {
+    font-size: 1.5em;
+  }
+  }
 
 @media (min-width: 992px) {
   .text-lg-left {
