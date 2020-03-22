@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Rev Who?</title>
+
+  <!-- Custom fonts for this theme -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+  <!-- Theme CSS -->
+  <link href="css/freelancer.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Rev Who?</a>
+      <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Start</a>
+          </li>
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">Options</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Masthead -->
+  <header class="masthead bg-primary text-white text-center">
+    <div class="container d-flex align-items-center flex-column">
+
+      <!-- Masthead Avatar Image -->
+      
+
+      <!-- Masthead Heading -->
+      <h1 class="masthead-heading text-uppercase mb-0">Rev Who?</h1>
+
+      <!-- Icon Divider -->
+      <div class="divider-custom divider-light">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon">
+          <i class="fas fa-star"></i>
+        </div>
+        <div class="divider-custom-line"></div>
+      </div>
+
+      <!-- Masthead Subheading -->
+      <p class="masthead-subheading font-weight-light mb-0" style="padding-bottom: 20px;">It's Guess Who, but with us nerds</p>
+
+      <p class="masthead-subheading font-weight-light mb-0" style="font-size: 16px;">Only difference is you have to use personality traits instead of physical traits</p>
+
+    </div>
+  </header>
+
+
+  <!-- lazy adding of js code -->
+<script> 
+
+  /**
+ * Shuffles array in place.
+ * @param {Array} a items An array containing the items.
+ */
+function shuffle(a) {
+    var j, x, i;
+    for (i = a.length - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        x = a[i];
+        a[i] = a[j];
+        a[j] = x;
+    }
+    return a;
+}
+
+function clicked(name)
+{
+
+  var imgElement = document.getElementById(name);
+
+  if (imgElement.src.includes("closed"))
+  {
+    imgElement.src = "img/portfolio/" + name + ".png";
+  }
+  else
+  {
+    imgElement.src = "img/portfolio/closed.png";
+  }
+  
+}
+
+function reset()
+{
+  var i = 0;
+  while (i < nerds.length)
+  {
+    name = nerds[i];
+    var imgElement = document.getElementById(name);
+    
+    if (!imgElement.src.includes(name))
+    {
+      imgElement.src = "img/portfolio/" + name + ".png";
+    }
+    i++;
+  }
+}
+
+var nerds = ["Bambi", "Dan", "Keifer", "Chris", "Konrad", "Kurt", "Duncan", "Davo", "Andrew", "Matt", "Sam", "Scott", "Mark", "Lane", "Nadia", "Alex", "Max", "Jason", "Amanda", "Sizzle", "Nolan", "Leah", "Kayla", "Luis"];
+//main stuff
+window.onload = function(){
+
+  
+  nerds = shuffle(nerds);
+
+    var img = document.createElement("img");
+     
+    img.src = "img/portfolio/"+ nerds[0] + ".png";
+    img.style.width = '100%';
+    var src = document.getElementById("output");
+    src.appendChild(img);
+
+};
+</script> 
+
+
+  <!-- Portfolio Section -->
+  <section class="page-section portfolio" id="portfolio">
+    <div class="container">
+
+      <!-- Portfolio Section Heading -->
+      <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Your Person is</h2>
+
+
+      <!-- Icon Divider -->
+      <div class="divider-custom">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon">
+          <i class="fas fa-star"></i>
+        </div>
+        <div class="divider-custom-line"></div>
+      </div>
+
+      <div class="col-md-4 offset-md-4 offset-sm-1">
+        <div id="output" class="portfolio-item text-center" style="width: 50%; margin-left: 25%;border-top: 50px solid #ffbb00; border-bottom: 50px solid #ffbb00;">
+
+        </div>
+      </div>
+
+            <!-- Icon Divider -->
+      <div class="divider-custom">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon">
+          <i class="fas fa-star"></i>
+        </div>
+        <div class="divider-custom-line"></div>
+      </div>
+
+
+
+      <!-- Portfolio Grid Items -->
+      <div class="row" style="background-color: #62aeec; padding-top: 30px; padding-left: 20px; padding-right: 20px;">
+
+        <!-- Portfolio Item 1 -->
+        <div class="col-md-3 col-lg-2">
+          <div class="portfolio-item mx-auto" style="background-color: #ffbb00; padding-top: 30px;" onclick="clicked('Bambi')">
+
+            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+              <div class="portfolio-item-caption-content text-center text-white">
+                <i class="fas fa-redo fa-3x"></i>
+              </div>
+            </div>
+            <img id="Bambi" class="img-fluid" src="img/portfolio/bambi.png" alt="">
+            <h2 class="text-center" style="color: white;" >Bambi</h2>
+          </div>
+        </div>
+
+
+
+        <!-- Portfolio Item 3 -->
+        <div class="col-md-3 col-lg-2">
+          <div class="portfolio-item mx-auto" style="background-color: #ffbb00; padding-top: 30px;" onclick="clicked('Keifer')">
+            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+              <div class="portfolio-item-caption-content text-center text-white">
+                <i class="fas fa-redo fa-3x"></i>
+              </div>
+            </div>
+            <img id="Keifer" class="img-fluid" src="img/portfolio/keifer.png" alt="">
+            <h2 class="text-center" style="color: white;" >Keifer</h2>
+          </div>
+        </div>
+
+
+
+
+
+        <!-- Portfolio Item 6 -->
+        <div class="col-md-3 col-lg-2">
+          <div class="portfolio-item mx-auto" style="background-color: #ffbb00; padding-top: 30px;" onclick="clicked('Kurt')">
+            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+              <div class="portfolio-item-caption-content text-center text-white">
+                <i class="fas fa-redo fa-3x"></i>
+              </div>
+            </div>
+            <img id="Kurt" class="img-fluid" src="img/portfolio/kurt.png" alt="">
+            <h2 class="text-center" style="color: white;" >Kurt</h2>
+          </div>
+        </div>
+
+        <!-- Portfolio Item 6 -->
+        <div class="col-md-3 col-lg-2">
+          <div class="portfolio-item mx-auto" style="background-color: #ffbb00; padding-top: 30px;" onclick="clicked('Duncan')">
+            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+              <div class="portfolio-item-caption-content text-center text-white">
+                <i class="fas fa-redo fa-3x"></i>
+              </div>
+            </div>
+            <img id="Duncan" class="img-fluid" src="img/portfolio/Duncan.png" alt="">
+            <h2 class="text-center" style="color: white;" >Duncan</h2>
+          </div>
+        </div>
+
+                <!-- Portfolio Item 6 -->
+        <div class="col-md-3 col-lg-2">
+          <div class="portfolio-item mx-auto" style="background-color: #ffbb00; padding-top: 30px;" onclick="clicked('Alex')">
+            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+              <div class="portfolio-item-caption-content text-center text-white">
+                <i class="fas fa-redo fa-3x"></i>
+              </div>
+            </div>
+            <img id="Alex" class="img-fluid" src="img/portfolio/Alex.png" alt="">
+            <h2 class="text-center" style="color: white;" >Alex</h2>
+          </div>
+        </div>
+
+        <!-- Portfolio Item 6 -->
+        <div class="col-md-3 col-lg-2">
+          <div class="portfolio-item mx-auto" style="background-color: #ffbb00; padding-top: 30px;" onclick="clicked('Davo')">
+            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+              <div class="portfolio-item-caption-content text-center text-white">
+                <i class="fas fa-redo fa-3x"></i>
+              </div>
+            </div>
+            <img id="Davo" class="img-fluid" src="img/portfolio/Davo.png" alt="">
+            <h2 class="text-center" style="color: white;" >Davo</h2>
+          </div>
+        </div>
+
+        <!-- Portfolio Item 6 -->
+        <div class="col-md-3 col-lg-2">
+          <div class="portfolio-item mx-auto" style="background-color: #ffbb00; padding-top: 30px;" onclick="clicked('Andrew')">
+            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+              <div class="portfolio-item-caption-content text-center text-white">
+                <i class="fas fa-redo fa-3x"></i>
+              </div>
+            </div>
+            <img id="Andrew" class="img-fluid" src="img/portfolio/Andrew.png" alt="">
+            <h2 class="text-center" style="color: white;" >Andrew</h2>
+          </div>
+        </div>
+
+
+                <!-- Portfolio Item 2 -->
+        <div class="col-md-3 col-lg-2">
+          <div class="portfolio-item mx-auto" style="background-color: #ffbb00; padding-top: 30px;" onclick="clicked('Dan')">
+            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+              <div class="portfolio-item-caption-content text-center text-white">
+                <i class="fas fa-redo fa-3x"></i>
+              </div>
+            </div>
+            <img id="Dan" class="img-fluid" src="img/portfolio/dan.png" alt="">
+            <h2 class="text-center" style="color: white;" >Dan</h2>
+          </div>
+        </div>
+
+                <!-- Portfolio Item 4 -->
+        <div class="col-md-3 col-lg-2">
+          <div class="portfolio-item mx-auto" style="background-color: #ffbb00; padding-top: 30px;" onclick="clicked('Chris')">
+            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+              <div class="portfolio-item-caption-content text-center text-white">
+                <i class="fas fa-redo fa-3x"></i>
+              </div>
+            </div>
+            <img id="Chris" class="img-fluid" src="img/portfolio/chris.png" alt="">
+            <h2 class="text-center" style="color: white;" >Chris</h2>
+          </div>
+        </div>
+
+
+                <!-- Portfolio Item 6 -->
+        <div class="col-md-3 col-lg-2">
+          <div class="portfolio-item mx-auto" style="background-color: #ffbb00; padding-top: 30px;" onclick="clicked('Kayla')">
+            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+              <div class="portfolio-item-caption-content text-center text-white">
+                <i class="fas fa-redo fa-3x"></i>
+              </div>
+            </div>
+            <img id="Kayla" class="img-fluid" src="img/portfolio/Kayla.png" alt="">
+            <h2 class="text-center" style="color: white;" >Kayla</h2>
+          </div>
+        </div>
+
+
+        <!-- Portfolio Item 6 -->
+        <div class="col-md-3 col-lg-2">
+          <div class="portfolio-item mx-auto" style="background-color: #ffbb00; padding-top: 30px;" onclick="clicked('Matt')">
+            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+              <div class="portfolio-item-caption-content text-center text-white">
+                <i class="fas fa-redo fa-3x"></i>
+              </div>
+            </div>
+            <img id="Matt" class="img-fluid" src="img/portfolio/Matt.png" alt="">
+            <h2 class="text-center" style="color: white;" >Matt</h2>
+          </div>
+        </div>
+
+        <!-- Portfolio Item 6 -->
+        <div class="col-md-3 col-lg-2">
+          <div class="portfolio-item mx-auto" style="background-color: #ffbb00; padding-top: 30px;" onclick="clicked('Sam')">
+            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+              <div class="portfolio-item-caption-content text-center text-white">
+                <i class="fas fa-redo fa-3x"></i>
+              </div>
+            </div>
+            <img id="Sam" class="img-fluid" src="img/portfolio/Sam.png" alt="">
+            <h2 class="text-center" style="color: white;" >Sam</h2>
+          </div>
+        </div>
+
+        <!-- Portfolio Item 6 -->
+        <div class="col-md-3 col-lg-2">
+          <div class="portfolio-item mx-auto" style="background-color: #ffbb00; padding-top: 30px;" onclick="clicked('Scott')">
+            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+              <div class="portfolio-item-caption-content text-center text-white">
+                <i class="fas fa-redo fa-3x"></i>
+              </div>
+            </div>
+            <img id="Scott" class="img-fluid" src="img/portfolio/Scott.png" alt="">
+            <h2 class="text-center" style="color: white;" >Scott</h2>
+          </div>
+        </div>
+
+
+        <!-- Portfolio Item 5 -->
+        <div class="col-md-3 col-lg-2">
+          <div class="portfolio-item mx-auto" style="background-color: #ffbb00; padding-top: 30px;" onclick="clicked('Konrad')">
+            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+              <div class="portfolio-item-caption-content text-center text-white">
+                <i class="fas fa-redo fa-3x"></i>
+              </div>
+            </div>
+            <img id="Konrad" class="img-fluid" src="img/portfolio/konrad.png" alt="">
+            <h2 class="text-center" style="color: white;" >Konrad</h2>
+          </div>
+        </div>
+
+        <!-- Portfolio Item 6 -->
+        <div class="col-md-3 col-lg-2">
+          <div class="portfolio-item mx-auto" style="background-color: #ffbb00; padding-top: 30px;" onclick="clicked('Mark')">
+            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+              <div class="portfolio-item-caption-content text-center text-white">
+                <i class="fas fa-redo fa-3x"></i>
+              </div>
+            </div>
+            <img id="Mark" class="img-fluid" src="img/portfolio/Mark.png" alt="">
+            <h2 class="text-center" style="color: white;" >Mark</h2>
+          </div>
+        </div>
+
+
+
+        <!-- Portfolio Item 6 -->
+        <div class="col-md-3 col-lg-2">
+          <div class="portfolio-item mx-auto" style="background-color: #ffbb00; padding-top: 30px;" onclick="clicked('Lane')">
+            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+              <div class="portfolio-item-caption-content text-center text-white">
+                <i class="fas fa-redo fa-3x"></i>
+              </div>
+            </div>
+            <img id="Lane" class="img-fluid" src="img/portfolio/Lane.png" alt="">
+            <h2 class="text-center" style="color: white;" >Lane</h2>
+          </div>
+        </div>
+
+        <!-- Portfolio Item 6 -->
+        <div class="col-md-3 col-lg-2">
+          <div class="portfolio-item mx-auto" style="background-color: #ffbb00; padding-top: 30px;" onclick="clicked('Nadia')">
+            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+              <div class="portfolio-item-caption-content text-center text-white">
+                <i class="fas fa-redo fa-3x"></i>
+              </div>
+            </div>
+            <img id="Nadia" class="img-fluid" src="img/portfolio/Nadia.png" alt="">
+            <h2 class="text-center" style="color: white;" >Nadia</h2>
+          </div>
+        </div>
+
+
+
+
+        <!-- Portfolio Item 6 -->
+        <div class="col-md-3 col-lg-2">
+          <div class="portfolio-item mx-auto" style="background-color: #ffbb00; padding-top: 30px;" onclick="clicked('Max')">
+            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+              <div class="portfolio-item-caption-content text-center text-white">
+                <i class="fas fa-redo fa-3x"></i>
+              </div>
+            </div>
+            <img id="Max" class="img-fluid" src="img/portfolio/Max.png" alt="">
+            <h2 class="text-center" style="color: white;" >Max</h2>
+          </div>
+        </div>
+
+        <!-- Portfolio Item 6 -->
+        <div class="col-md-3 col-lg-2">
+          <div class="portfolio-item mx-auto" style="background-color: #ffbb00; padding-top: 30px;" onclick="clicked('Jason')">
+            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+              <div class="portfolio-item-caption-content text-center text-white">
+                <i class="fas fa-redo fa-3x"></i>
+              </div>
+            </div>
+            <img id="Jason" class="img-fluid" src="img/portfolio/Jason.png" alt="">
+            <h2 class="text-center" style="color: white;" >Jason</h2>
+          </div>
+        </div>
+
+        <!-- Portfolio Item 6 -->
+        <div class="col-md-3 col-lg-2">
+          <div class="portfolio-item mx-auto" style="background-color: #ffbb00; padding-top: 30px;" onclick="clicked('Amanda')">
+            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+              <div class="portfolio-item-caption-content text-center text-white">
+                <i class="fas fa-redo fa-3x"></i>
+              </div>
+            </div>
+            <img id="Amanda" class="img-fluid" src="img/portfolio/Amanda.png" alt="">
+            <h2 class="text-center" style="color: white;" >Amanda</h2>
+          </div>
+        </div>
+
+        <!-- Portfolio Item 6 -->
+        <div class="col-md-3 col-lg-2">
+          <div class="portfolio-item mx-auto" style="background-color: #ffbb00; padding-top: 30px;" onclick="clicked('Sizzle')">
+            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+              <div class="portfolio-item-caption-content text-center text-white">
+                <i class="fas fa-redo fa-3x"></i>
+              </div>
+            </div>
+            <img id="Sizzle" class="img-fluid" src="img/portfolio/Sizzle.png" alt="">
+            <h2 class="text-center" style="color: white;" >Sizzle</h2>
+          </div>
+        </div>
+
+        <!-- Portfolio Item 6 -->
+        <div class="col-md-3 col-lg-2">
+          <div class="portfolio-item mx-auto" style="background-color: #ffbb00; padding-top: 30px;" onclick="clicked('Nolan')">
+            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+              <div class="portfolio-item-caption-content text-center text-white">
+                <i class="fas fa-redo fa-3x"></i>
+              </div>
+            </div>
+            <img id="Nolan" class="img-fluid" src="img/portfolio/Nolan.png" alt="">
+            <h2 class="text-center" style="color: white;" >Nolan</h2>
+          </div>
+        </div>
+
+        <!-- Portfolio Item 6 -->
+        <div class="col-md-3 col-lg-2">
+          <div class="portfolio-item mx-auto" style="background-color: #ffbb00; padding-top: 30px;" onclick="clicked('Leah')">
+            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+              <div class="portfolio-item-caption-content text-center text-white">
+                <i class="fas fa-redo fa-3x"></i>
+              </div>
+            </div>
+            <img id="Leah" class="img-fluid" src="img/portfolio/Leah.png" alt="">
+            <h2 class="text-center" style="color: white;" >Leah</h2>
+          </div>
+        </div>
+
+
+
+
+        <!-- Portfolio Item 6 -->
+        <div class="col-md-3 col-lg-2">
+          <div class="portfolio-item mx-auto" style="background-color: #ffbb00; padding-top: 30px;" onclick="clicked('Luis')">
+            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+              <div class="portfolio-item-caption-content text-center text-white">
+                <i class="fas fa-redo fa-3x"></i>
+              </div>
+            </div>
+            <img id="Luis" class="img-fluid" src="img/portfolio/Luis.png" alt="">
+            <h2 class="text-center" style="color: white;" >Luis</h2>
+          </div>
+        </div>
+
+
+
+
+
+      </div>
+      <!-- /.row -->
+
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="page-section bg-primary text-white mb-0" id="about">
+    <div class="container">
+
+      <!-- About Section Heading -->
+      <h2 class="page-section-heading text-center text-uppercase text-white">Options</h2>
+
+      <!-- Icon Divider -->
+      <div class="divider-custom divider-light">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon">
+          <i class="fas fa-star"></i>
+        </div>
+        <div class="divider-custom-line"></div>
+      </div>
+
+      <!-- About Section Content -->
+      <div class="row">
+        <div class="col-lg-4 offset-lg-4 text-center">
+          <p class="lead">Unflip all the face down nerds</p>
+        </div>
+      </div>
+
+      <!-- About Section Button -->
+      <div class="text-center mt-4" style="padding-bottom: 50px;">
+        <a class="btn btn-xl btn-outline-light" onclick="reset();">
+          <i class="fas fa-upload mr-2"></i>
+          Unflip
+        </a>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-4 offset-lg-4 text-center">
+          <p class="lead">Restart the game with a new person</p>
+        </div>
+      </div>
+
+
+      <div class="text-center mt-4" style="padding-bottom: 50px;">
+        <a class="btn btn-xl btn-outline-light" onclick="location.reload();">
+          <i class="fas fa-download mr-2"></i>
+          Restart
+        </a>
+      </div>
+
+
+    </div>
+  </section>
+
+
+  <!-- Footer 
+  <footer class="footer text-center">
+
+  </footer>
+  -->
+  <!-- Copyright Section -->
+  <section class="copyright py-4 text-center text-white">
+    <div class="container">
+      <small>Made by Dan</small>
+    </div>
+  </section>
+
+  <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+  <div class="scroll-to-top d-lg-none position-fixed ">
+    <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
+      <i class="fa fa-chevron-up"></i>
+    </a>
+  </div>
+
+  <Rev Who?!-- Portfolio Modals -->
+
+  <!-- Portfolio Modal 1 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Log Cabin</h2>
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+                <!-- Portfolio Modal - Image -->
+                <img class="img-fluid rounded mb-5" src="img/portfolio/cabin.png" alt="">
+                <!-- Portfolio Modal - Text -->
+                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                <button class="btn btn-primary" href="#" data-dismiss="modal">
+                  <i class="fas fa-times fa-fw"></i>
+                  Close Window
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Portfolio Modal 2 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-labelledby="portfolioModal2Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Tasty Cake</h2>
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+                <!-- Portfolio Modal - Image -->
+                <img class="img-fluid rounded mb-5" src="img/portfolio/cake.png" alt="">
+                <!-- Portfolio Modal - Text -->
+                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                <button class="btn btn-primary" href="#" data-dismiss="modal">
+                  <i class="fas fa-times fa-fw"></i>
+                  Close Window
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Portfolio Modal 3 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-labelledby="portfolioModal3Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Circus Tent</h2>
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+                <!-- Portfolio Modal - Image -->
+                <img class="img-fluid rounded mb-5" src="img/portfolio/circus.png" alt="">
+                <!-- Portfolio Modal - Text -->
+                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                <button class="btn btn-primary" href="#" data-dismiss="modal">
+                  <i class="fas fa-times fa-fw"></i>
+                  Close Window
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Portfolio Modal 4 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-labelledby="portfolioModal4Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Controller</h2>
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+                <!-- Portfolio Modal - Image -->
+                <img class="img-fluid rounded mb-5" src="img/portfolio/game.png" alt="">
+                <!-- Portfolio Modal - Text -->
+                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                <button class="btn btn-primary" href="#" data-dismiss="modal">
+                  <i class="fas fa-times fa-fw"></i>
+                  Close Window
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Portfolio Modal 5 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-labelledby="portfolioModal5Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Locked Safe</h2>
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+                <!-- Portfolio Modal - Image -->
+                <img class="img-fluid rounded mb-5" src="img/portfolio/safe.png" alt="">
+                <!-- Portfolio Modal - Text -->
+                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                <button class="btn btn-primary" href="#" data-dismiss="modal">
+                  <i class="fas fa-times fa-fw"></i>
+                  Close Window
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Portfolio Modal 6 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-labelledby="portfolioModal6Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Submarine</h2>
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+                <!-- Portfolio Modal - Image -->
+                <img class="img-fluid rounded mb-5" src="img/portfolio/submarine.png" alt="">
+                <!-- Portfolio Modal - Text -->
+                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                <button class="btn btn-primary" href="#" data-dismiss="modal">
+                  <i class="fas fa-times fa-fw"></i>
+                  Close Window
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Contact Form JavaScript -->
+  <script src="js/jqBootstrapValidation.js"></script>
+
+
+  <!-- Custom scripts for this template -->
+  <script src="js/freelancer.min.js"></script>
+
+</body>
+
+</html>
